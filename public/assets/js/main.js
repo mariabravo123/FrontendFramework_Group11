@@ -1,9 +1,11 @@
-// Selecionar o botão e o menu
+// Select Menu button
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
 
-// Adicionar um evento de clique ao botão
+// Add click event on button
 menuToggle.addEventListener('click', () => {
-    // Alternar a classe 'show' no menu
+    // Alter class 'show' no menu
     menu.classList.toggle('show');
 });
+
+

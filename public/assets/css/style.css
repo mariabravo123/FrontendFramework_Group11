@@ -37,9 +37,9 @@ body {
   background-color: #343a40;
   color: white;
   position: fixed;
-  left: -250px; /* Esconde o menu fora da tela */
+  left: -250px; 
   top: 0;
-  transition: left 0.3s ease; /* Animação suave */
+  transition: left 0.3s ease; 
 }
 
 .sidebar-mob h4 {
@@ -86,17 +86,17 @@ body {
   background-color: #505050;
 }
 
-/* Sidebar aberto */
+/* Sidebar */
 .sidebar-mob.open {
-  left: 0; /* Traz o menu para dentro da tela */
+  left: 0; 
 }
 
-/* Botão de toggle */
+/* Toggle Botton */
 .toggle-btn {
   position: fixed;
   top: 20px;
-  left: 20px; /* Inicialmente na borda esquerda */
-  z-index: 1000; /* Acima do menu */
+  left: 20px; 
+  z-index: 1000; 
   padding: 10px 15px;
   background-color: #007bff;
   color: white;
@@ -104,41 +104,29 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: left 0.3s ease; /* Move junto com o menu */
+  transition: left 0.3s ease; 
 }
 
-/* Botão se move junto com o menu */
+/* Menu */
 .sidebar-mob.open + .toggle-btn {
-  left: 230px; /* Desloca o botão para a borda do menu */
+  left: 230px; 
 }
+
 
 
 .container {
-  /* margin-bottom: 2%;
-margin-right: 10px; */
-  /* min-width: 80vw; */
   background-color: #3751ff;
-  /* display: flex; */
 }
 
-/* .ag-card1,
-.ag-card2 {
-  background-color: #ffffff;
-  margin-top: 3%;
-  border-radius: 8px;
-  padding: 3%;
-  margin-left: 1px;
-} */
-
-/*code for task check box */
+/*Code for task check box */
 .task-checkbox{
   color: #3751ff;
 }
 
 
 .card-hover {
-  border: 1px solid transparent; /* Add a transparent border initially */
-  transition: all 0.3s ease; /* Smooth transition */
+  border: 1px solid transparent; 
+  transition: all 0.3s ease; 
 }
 
 
@@ -155,9 +143,13 @@ margin-right: 10px; */
 }
 
 
-/* __________it end here___________________ */
+/* __________Mobile end here____________ */
 
 
+.my-4 h2 {
+  font-size: 1.5rem;
+  display: none;
+}
 
 .ag-header {
   display: flex;
@@ -193,10 +185,10 @@ margin-right: 10px; */
   justify-content: space-between;
   align-items: center;
 
-  width: 100%; /* Ensures the element occupies the full width */
-  border-bottom: 0.5px solid #dfe0e4; /* Adds the line */
-  padding-top: 10px; /* Adjust as needed */
-  margin: 0; /* Removes side margins */
+  width: 100%; 
+  border-bottom: 0.5px solid #dfe0e4;
+  padding-top: 10px; 
+  margin: 0;
 
   padding-bottom: 10px;
 }
@@ -206,7 +198,7 @@ margin-right: 10px; */
 }
 
 .card {
-  padding: 0; /* Removes internal padding if necessary */
+  padding: 0; 
   
 }
 
@@ -227,6 +219,7 @@ margin-right: 10px; */
   display: flex;
 }
 
+/* Media - desktop styling */
 
 @media (min-width: 768px) {
   .d-md-block {
@@ -238,6 +231,7 @@ margin-right: 10px; */
   .un-cards {
     padding-top: 30px;
     height: 300px;
+  
   }
   .min-card{
     height: 100%;
@@ -251,13 +245,12 @@ margin-right: 10px; */
   }
 
   .toggle-btn > span{
-    
 
     display: none;
     padding-right: 50px;
   }
 
-  /*desktop version*/
+  /*Here is our desktop version*/
   #navdesk {
     background-color: rgb(34, 41, 48);
     display: flex;
@@ -282,9 +275,8 @@ margin-right: 10px; */
 
   .my-4 h2 {
     font-size: 1.5rem;
+    display: block;
   }
-
-
   
   .m-icons {
     display: flex;
@@ -293,7 +285,7 @@ margin-right: 10px; */
     gap: 20px;
   }
 
-  /* Card Styling */
+  /* Cards Styling */
   .card {
     background-color: #ffffff;
     border: 1px solid #ccc;
@@ -442,8 +434,5 @@ margin-right: 10px; */
     padding: 5px 8px;
     border-radius: 0.3em;
   }
-
-  /*section 04 - graph*/
-
   
 }
