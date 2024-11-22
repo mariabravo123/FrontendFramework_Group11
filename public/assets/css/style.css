@@ -1,0 +1,449 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+/* Mobile version */
+.container-sm {
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-fluid {
+  background-color: #f4f4f7;
+}
+
+/*nav*/
+
+.navmob {
+  display: hidden;
+}
+
+#navdesk {
+  display: flex;
+}
+
+.sidebar-mob {
+  width: 250px;
+  height: 100vh;
+  background-color: #343a40;
+  color: white;
+  position: fixed;
+  left: -250px; /* Esconde o menu fora da tela */
+  top: 0;
+  transition: left 0.3s ease; /* Animação suave */
+}
+
+.sidebar-mob h4 {
+  font-size: 0.9rem;
+  color: #6f6e6e;
+  margin: 0;
+  text-align: left;
+}
+
+.sidebar-mob a {
+  font-size: 1rem;
+  padding: 8px 50px;
+  display: block;
+  color: #a0aec0;
+  text-decoration: none;
+}
+.nav-item-mob i {
+  margin-right: 10px;
+}
+
+#logo-mob {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 15%;
+}
+
+.sidebar-logo-mob {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  margin-left: 20px;
+}
+
+.text-light-mob h4 {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 700;
+}
+
+.sidebar-mob a:hover {
+  color: #ffffff;
+  background-color: #505050;
+}
+
+/* Sidebar aberto */
+.sidebar-mob.open {
+  left: 0; /* Traz o menu para dentro da tela */
+}
+
+/* Botão de toggle */
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* Inicialmente na borda esquerda */
+  z-index: 1000; /* Acima do menu */
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: left 0.3s ease; /* Move junto com o menu */
+}
+
+/* Botão se move junto com o menu */
+.sidebar-mob.open + .toggle-btn {
+  left: 230px; /* Desloca o botão para a borda do menu */
+}
+
+
+.container {
+  /* margin-bottom: 2%;
+margin-right: 10px; */
+  /* min-width: 80vw; */
+  background-color: #3751ff;
+  /* display: flex; */
+}
+
+/* .ag-card1,
+.ag-card2 {
+  background-color: #ffffff;
+  margin-top: 3%;
+  border-radius: 8px;
+  padding: 3%;
+  margin-left: 1px;
+} */
+
+/*code for task check box */
+.task-checkbox{
+  color: #3751ff;
+}
+
+
+.card-hover {
+  border: 1px solid transparent; /* Add a transparent border initially */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+
+.card:hover {
+  cursor: pointer !important;
+  border-color: #3751ff !important;
+  color: #3751ff !important;
+  background-color: white !important;
+}
+
+.card:hover p,
+.card:hover h4 {
+  color: #3751ff;
+}
+
+
+/* __________it end here___________________ */
+
+
+
+.ag-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3% 0;
+}
+
+.ag-title h4 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #252733;
+  margin-bottom: 0;
+}
+
+.ag-title p {
+  font-size: 0.8rem;
+  color: #999aa1;
+}
+
+.ag-title p span {
+  font-size: 0.8rem;
+  color: #4b506d;
+}
+
+#ag-link {
+  color: #3751ff;
+  font-size: 1rem;
+}
+
+.ag-smallgp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%; /* Ensures the element occupies the full width */
+  border-bottom: 0.5px solid #dfe0e4; /* Adds the line */
+  padding-top: 10px; /* Adjust as needed */
+  margin: 0; /* Removes side margins */
+
+  padding-bottom: 10px;
+}
+
+.ag-smallgp:last-child {
+  border-bottom: none;
+}
+
+.card {
+  padding: 0; /* Removes internal padding if necessary */
+  
+}
+
+.ag-smallgp p {
+  font-size: 1rem;
+  color: #252733;
+}
+
+.ag-small p {
+  color: #9fa2b4;
+  margin-bottom: 0;
+}
+
+.ag-gap {
+  width: 100%;
+  background-color: aqua;
+  flex-direction: row;
+  display: flex;
+}
+
+
+@media (min-width: 768px) {
+  .d-md-block {
+      display: hidden !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .un-cards {
+    padding-top: 30px;
+    height: 300px;
+  }
+  .min-card{
+    height: 100%;
+  }
+  .navmob {
+    display: hidden;
+  }
+  .toggle-btn{
+    left: -30px;
+
+  }
+
+  .toggle-btn > span{
+    
+
+    display: none;
+    padding-right: 50px;
+  }
+
+  /*desktop version*/
+  #navdesk {
+    background-color: rgb(34, 41, 48);
+    display: flex;
+  }
+
+  .nav-link a {
+    color: #05126d;
+  }
+  .text-light {
+    width: 90%;
+  }
+
+  .text-light h4 {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .my-4 {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+  }
+
+  .my-4 h2 {
+    font-size: 1.5rem;
+  }
+
+
+  
+  .m-icons {
+    display: flex;
+    width: 40%;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  /* Card Styling */
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: 1px solid #dcdcdc;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .card h4 {
+    font-size: 0.9rem;
+    color: #a09f9f;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  /* Top Cards Section */
+  #top-cards {
+    display: flex;
+  }
+
+  /* Graph and Card Styling */
+  .content-graph {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .graph-header {
+    padding: 3% 0;
+  }
+
+  .graph {
+    flex: 1;
+    height: auto;
+    background-color: #ffffff;
+  }
+
+  .graph img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .card-group {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  .card-graph {
+    flex: 1 1 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #cdced3;
+    padding: 15px;
+  }
+
+  .card-graph h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 5px 0;
+  }
+
+  .card-graph p {
+    font-size: 0.9rem;
+    color: #9fa2b4;
+    margin: 0;
+  }
+
+  /* Sidebar Styling */
+  #logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 15%;
+  }
+
+  .sidebar-logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .sidebar h4 {
+    font-size: 0.9rem;
+    color: #6f6e6e;
+    margin: 0;
+    text-align: left;
+  }
+
+  .sidebar a {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+    display: block;
+    color: #a0aec0;
+    text-decoration: none;
+  }
+
+  .sidebar a:hover {
+    color: #ffffff;
+    background-color: #505050;
+  }
+
+  /* Chart Placeholder */
+  .chart-placeholder img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 15px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Unresolved Tickets and Tasks List */
+  .list-group-item {
+    font-size: 0.9rem;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .badge {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+    border-radius: 0.3em;
+  }
+
+  /*section 04 - graph*/
+
+  
+}

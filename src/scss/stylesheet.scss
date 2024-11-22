@@ -1,0 +1,270 @@
+
+$white: #ffffff;
+$border-color: #ccc;
+$outline-color: #dcdcdc;
+$text-color-light: #a09f9f;
+$text-color-muted: #9fa2b4;
+$text-color-dark: #6f6e6e;
+$hover-bg-color: #505050;
+
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Mobile version */
+.container-sm {
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+
+/* Card Styling */
+.card {
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  outline: 1px solid $outline-color;
+  margin-bottom: 15px;
+  padding: 10px;
+  text-align: center;
+
+  h4 {
+    font-size: 0.9rem;
+    color: $text-color-light;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+#top-cards {
+  display: flex;
+}
+
+/* Graph and Card Styling */
+.content-graph {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0; 
+  border-radius: 8px;
+  overflow: hidden; 
+}
+
+// .graph {
+//   flex: 1; 
+//   height: auto; 
+
+//   img {
+//     width: 100%; 
+//     height: auto; 
+//     display: block; 
+//     background-color: $white;
+//     padding: 10px;
+//     margin-bottom: 10px;
+//   }
+// }
+
+.graph {
+    position: relative;
+    
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background-color: $white;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .graph-header {
+      position: absolute;
+      top: 32px;
+      left: 42px;
+      transform: translateY(-50%);
+      z-index: 2;
+      color: #000;
+  
+      .trends-title {
+        font-size: 19px;
+        font-weight: bold;
+        margin: 0;
+      }
+  
+      .graph-subtitle {
+        font-size: 12px;
+        color: #9fa2b4;
+        margin: 5px 0 0 0;
+      }
+    }
+  
+    .graph-legend {
+      position: absolute;
+      top: 45px; // Position the legend near the top
+      right: 42px; // Align it to the right
+      transform: translateY(-50%);
+      display: flex;
+      gap: 15px;
+  
+      .legend-item {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: #9fa2b4;
+  
+        .legend-color {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          margin-right: 5px;
+        }
+  
+        .today-color {
+          background-color: #4e5aff;
+          border-radius: 0px;
+        }
+  
+        .yesterday-color {
+          background-color: #d1d3e0; // Use the light gray color for "Yesterday"
+        }
+      }
+    }
+  }
+
+// Cards below the graph
+.card-group {
+  flex: 1; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  flex-wrap: wrap; 
+  padding: 10px 0;
+  background-color: $white;
+  margin-bottom: 10px;
+}
+
+.card-graph {
+  flex: 1 1 20%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #cdced3;
+  padding: 15px;
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 5px 0;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $text-color-muted;
+    margin: 0;
+  }
+}
+
+// Sidebar Styling
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.sidebar-logo {
+  width: 24px; 
+  height: 24px;
+}
+
+.sidebar-sticky {
+  h4 {
+    font-size: 0.9rem;
+    color: $text-color-dark;
+    margin: 0;
+    text-align: left; 
+  }
+}
+
+.sidebar {
+  a {
+    font-size: 0.85rem; 
+    padding: 8px 10px; 
+    display: block;
+    color: #a0aec0;
+    text-decoration: none;
+
+    &:hover {
+      color: $white;
+      background-color: $hover-bg-color; 
+    }
+  }
+}
+
+// Chart Placeholder 
+.chart-placeholder {
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 15px;
+    display: block;
+    margin: 0 auto; 
+  }
+}
+
+// Unresolved Tickets and Tasks List 
+.list-group-item {
+  font-size: 0.9rem; 
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 5px 8px; 
+  border-radius: 0.3em;
+}
+
+// Desktop Version
+/* Sidebar width for desktop */
+.sidebar {
+    width: 20%; 
+    position: fixed;
+    height: 100vh; 
+  }
+  
+  /* Main content shifts to align next to the sidebar */
+  .main-content {
+    margin-left: 20%;
+    padding: 20px;
+    width: 80%; /* Occupies the rest of the space */
+  }
+  
+  /* Card adjustments for desktop */
+  .card {
+    border: 1px solid #cdced3;
+    border-radius: 8px;
+  }
+  
+  /* Top Cards Styling */
+  #top-cards .col-md-3 {
+    flex: 1 1 calc(25% - 10px); /* 25% width with gap adjustments */
+    margin: 0 5px;
+  }
+
+// Desktop Version 
+
+  
